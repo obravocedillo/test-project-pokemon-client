@@ -1,0 +1,58 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+.glass-panel {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.scanline-overlay {
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 219, 231, 0.02) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+.scanner-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #00dbe7;
+    animation: scan 4s linear infinite;
+    z-index: 10;
+}
+@keyframes scan {
+    0% {
+        top: 0;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+.segmented-progress {
+    display: flex;
+    gap: 2px;
+    height: 8px;
+    width: 100%;
+}
+.progress-segment {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+.progress-segment.active {
+    background: #00dbe7;
+    box-shadow: 0 0 8px #00dbe7;
+}

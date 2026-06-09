@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+    --color-surface: #081425;
+    --color-on-surface: #d8e3fb;
+    --color-primary: #ffb4a8;
+    --color-on-surface-variant: #ebbbb4;
+    --color-outline-variant: #603e39;
+    --color-surface-variant: #2a3548;
+    --color-surface-container-low: #111c2d;
+    --color-tertiary: #00dbe7;
+
+    --spacing-stack-lg: 24px;
+    --spacing-gutter: 24px;
+    --spacing-container-margin-desktop: 40px;
+    --spacing-container-margin-mobile: 20px;
+    --spacing-stack-md: 12px;
+    --spacing-stack-sm: 4px;
+}
+
+* {
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background-color: #081425;
+    color: #d8e3fb;
+    font-family: "Inter", sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+    font-family: "Material Symbols Outlined";
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#app {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
